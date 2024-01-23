@@ -1,0 +1,183 @@
+html {
+    font-size: 20px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    border: 8px solid black;
+}
+
+p {
+    font-family: sans-serif;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    text-align: center;
+}
+
+header {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, minmax(50px, 100px));
+    gap: 10px;
+}
+
+.headerItem1 > h1 {
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+span {
+    text-transform:uppercase;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.headerItem2 {
+    width: 100%;
+    height: 100%;
+}
+
+.headerItem2 > div {
+    background-color: yellow;
+    border: solid black;
+    border-width: 2px 0;
+    display: flex;
+    justify-content: space-evenly;
+    
+    gap: 15px;
+    align-items: center;
+}
+
+.headerItem2 > div a {
+    margin: 15px;
+    padding: 5px;
+    color: black;
+    background-color: rgb(255, 238, 0);
+    text-decoration: none;
+    flex-basis: 200px;
+}
+
+.headerItem2 > div a > h3 {
+    margin: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.headerItem3 > h2 {
+    margin: 10px;
+    font-size: 3rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-decoration: underline double;
+}
+
+.listContainer {
+    width: 70%;
+    margin: 10px 0;
+    padding: 10px 0;
+    text-align: start;
+    position: relative;
+    left: 15%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(10, 1fr);
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+.list {
+    margin: 0 10px;
+    padding: 0 15px;
+}
+
+.list a {
+    text-decoration: none;
+}
+
+.list a > h3 {
+    color: black;
+    margin: 10px 0;
+    text-align: center;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+main button {
+    margin: 10px;
+    padding: 10px;
+    width: fit-content;
+}
+
+main button > a {
+    margin: 5px;
+    padding: 5px;
+    text-decoration: none;
+    color: rgb(141, 0, 0);
+    font-weight: 600;
+}
+
+main button > a > span {
+    text-decoration: none;
+    color: rgb(155, 0, 0);
+    font-size: 1rem;
+    font-weight: 900;
+}
+
+.backButton {
+    margin: 10px;
+    padding: 5px 20px;
+    width: 100%;
+    height: 100%;
+}
+
+/* EFFECTS */
+.btnHover:hover {
+    border: solid rgb(37, 0, 0);
+       border-width: 0px 3px 4px 0px;
+    background-color: rgb(236, 236, 2);
+}
+
+.btnHover:active {
+    border: solid rgb(37, 0, 0);
+       border-width: 0px 3px 4px 0px;
+    background-color: rgba(255, 0, 0, 0.493);
+}
+
+/* Responsive */
+
+@media (max-width:430px) {
+    header {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .headerItem2 {
+        height: auto;
+    }
+
+    .headerItem2 > div {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        background-color: rgba(255, 255, 255, 0);
+    }
+
+    .headerItem2 > div a {
+        margin: 5px 15px;
+        flex-basis: 100%;
+        width: 50%;
+    }
+}
